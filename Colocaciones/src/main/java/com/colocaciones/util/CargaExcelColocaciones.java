@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -19,11 +18,7 @@ import com.colocaciones.model.Colocacion;
 
 public class CargaExcelColocaciones {
 	
-	
-	private void cargaColocacionesBD() {
-		List<Colocacion> colocaciones = new ArrayList<>();
-		
-	}
+
 	
 	public void cargarArchivoColocaciones(InputStream is, List<Colocacion> colocaciones) throws IOException{
 		 
