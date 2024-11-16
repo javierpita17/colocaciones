@@ -17,7 +17,7 @@ import com.colocaciones.util.CargaExcelColocaciones;
 @Service
 public class ColocacionServiceImpl implements IColocacionService{
 	
-	@Autowired
+
 	private CargaExcelColocaciones cargaExcelColocaciones;
 	
 	@Autowired
@@ -31,6 +31,7 @@ public class ColocacionServiceImpl implements IColocacionService{
 	
 	public void cargaColocacionesBD(MultipartFile file) throws IOException{
 		InputStream in = null;
+		cargaExcelColocaciones = new CargaExcelColocaciones();
 		try{
 			in = file.getInputStream();
 			List<Colocacion> colocaciones = new ArrayList<>();

@@ -7,8 +7,7 @@ import java.time.ZoneId;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
-
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -22,7 +21,7 @@ public class CargaExcelColocaciones {
 	
 	public void cargarArchivoColocaciones(InputStream is, List<Colocacion> colocaciones) throws IOException{
 		 
-		Workbook workbook = new HSSFWorkbook(is);
+		Workbook workbook = new XSSFWorkbook(is);
 		
 		 String nombreHoja = workbook.getSheetName(0);
 		 
