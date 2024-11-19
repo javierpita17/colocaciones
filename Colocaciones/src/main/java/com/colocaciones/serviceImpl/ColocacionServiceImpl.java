@@ -43,6 +43,12 @@ public class ColocacionServiceImpl implements IColocacionService{
 			}
 		}
 	}
+
+
+	@Override
+	public List<Colocacion> getAllColocaciones() {
+		return colocacionesRepo.findAll();
+	}
 	
 	
 

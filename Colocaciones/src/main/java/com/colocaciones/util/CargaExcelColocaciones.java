@@ -75,13 +75,13 @@ public class CargaExcelColocaciones {
 				colocacion.setFechaCorte(this.convertDateToLocalDate(currentCell.getDateCellValue()));
 				break;
 			case 2:
-				colocacion.setDptId(currentCell.getStringCellValue());
+				colocacion.setDptId((int)currentCell.getNumericCellValue()+"");
 				break;
 			case 3:
 				colocacion.setDptNombre(currentCell.getStringCellValue());
 				break;	
 			case 4:
-				colocacion.setMpoId(currentCell.getStringCellValue());
+				colocacion.setMpoId((int)currentCell.getNumericCellValue()+"");
 				break;	
 			case 5:
 				colocacion.setMpoNombre(currentCell.getStringCellValue());
@@ -137,7 +137,7 @@ public class CargaExcelColocaciones {
 				colocacion.setEdad((int)currentCell.getNumericCellValue());
 				break;	
 			case 26:
-				colocacion.setSueldoMes(currentCell.getNumericCellValue());
+				colocacion.setSueldoMes(currentCell.getStringCellValue());
 				break;
 			case 27:
 				colocacion.setTotalColoca(currentCell.getNumericCellValue());
@@ -146,12 +146,14 @@ public class CargaExcelColocaciones {
 				colocacion.setFechaCargue(this.convertDateToLocalDate(currentCell.getDateCellValue()));
 				break;	
 			case 29:
-				colocacion.setSsmaTimeStamp(this.convertDateToLocalDate(currentCell.getDateCellValue()));
+				//colocacion.setSsmaTimeStamp(this.convertDateToLocalDate(currentCell.getDateCellValue()));
 				break;	
 			default:
 				break;
 			}
+			cellIdx++;
 		}
+		//colocacion.setSsmaTimeStamp(LocalDateTime.now());
 		
 		return colocacion;
 	}

@@ -1,5 +1,6 @@
 package com.colocaciones.model;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
@@ -11,7 +12,10 @@ import lombok.Data;
 @Data
 @Table(name = "COLOCACIONES")
 @Entity
-public class Colocacion {
+public class Colocacion implements Serializable{
+
+
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@Column(name = "ID")
@@ -26,7 +30,7 @@ public class Colocacion {
 	@Column(name = "DPT_NOMBRE")
 	private String dptNombre;
 	
-	@Column(name = "MPO_ID]")
+	@Column(name = "MPO_ID")
 	private String mpoId;
 	
 	@Column(name = "MPO_NOMBRE")
@@ -93,7 +97,7 @@ public class Colocacion {
 	private int edad;
 	
 	@Column(name = "SUELDO_MES")
-	private Double sueldoMes;
+	private String sueldoMes;
 	
 	@Column(name = "TOTAL_COLOCA")
 	private Double totalColoca;
@@ -101,6 +105,6 @@ public class Colocacion {
 	@Column(name = "FECHA CARGUE")
 	private LocalDateTime fechaCargue;
 	
-	@Column(name = "SSMA_TimeStamp")
-	private LocalDateTime ssmaTimeStamp;
+	//@Column(name = "SSMA_TimeStamp")
+	//private LocalDateTime ssmaTimeStamp;
 }

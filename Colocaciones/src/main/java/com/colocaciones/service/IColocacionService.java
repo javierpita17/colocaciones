@@ -12,5 +12,7 @@ public interface IColocacionService {
 	public void saveAllColocaciones(List<Colocacion> colocaciones);
 	
 	public void cargaColocacionesBD(MultipartFile file) throws IOException;
+	
+	public List<Colocacion> getAllColocaciones();
 
 }
